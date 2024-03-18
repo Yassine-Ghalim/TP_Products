@@ -1,0 +1,8 @@
+<div>
+    <ul class="list-group products">
+      <li class="list-group-item product-item" *ngFor="let product of products">
+        <app-product-details [product]="product" (ach)="purchase1(product)"></app-product-details>
+      </li>
+    </ul>
+  </div>
+ 

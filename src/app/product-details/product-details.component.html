@@ -1,0 +1,23 @@
+<div class="product row">
+  <div class="col-md-2 product-details">
+    <img [src]="product.img" alt="{{ product.name }}" class="img-fluid" />
+  </div>
+  <div class="col-md-6 product-info">
+    <div class="name text-primary custom-product-name"><b>{{ product.name }}</b></div>
+    <div *ngIf="!showDetails" class="description text-muted custom-product-description">
+      {{ product.description | slice:0:100 }} <!-- Afficher les 100 premiers caractères de la description -->
+      <button class="btn btn-link text-muted  btn-light" (click)="toggleDetails()"><b>Show more</b></button>
+    </div>
+
+    <div *ngIf="showDetails">
+    <p><b>Prix : {{ product.price }} €</b></p>
+      <p>{{ product.description }}</p>
+      <button class="btn btn-link text-muted  btn-light" (click)="toggleDetails()"><b>Hide details</b></button>
+    </div>
+    <div class="quantity text-danger custom-product-quantity"><b>Quantité disponible: {{ product.quantity }}</b></div>
+  </div>
+  <div class="col-md-3 price">
+    <div>{{ product.price }} €</div>
+    <button class="btn btn-primary cta" (click)="purchase2()">Buy</button><br>
+  </div>
+</div>

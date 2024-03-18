@@ -1,0 +1,8 @@
+/* home.component.css */
+.background-image {
+  background-image: url('/src/assets/img/img1.jpeg'); /* Spécifiez l'URL de votre image de fond */
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+  background-position: center; /* Centre l'image horizontalement et verticalement */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  height: 100vh; /* Ajuste la hauteur de l'élément pour remplir l'écran */
+}
